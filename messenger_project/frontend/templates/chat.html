@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Chat - Messenger{% endblock %}
+{% block content %}
+<div class="row" data-chat-id="{{ chat_id }}">
+    <div class="col-md-4 mb-3">
+        <button class="btn btn-outline-secondary mb-3" onclick="window.history.back()">&larr; Back</button>
+        <h2 class="h4" id="chat-title">Chat</h2>
+        <div id="chat-members-list" class="small text-muted"></div>
+    </div>
+    <div class="col-md-8">
+        <div class="card chat-card">
+            <div class="card-body chat-messages" id="message-container">
+                <div class="text-center text-muted" id="loading-messages">Loading messages...</div>
+            </div>
+            <div class="card-footer">
+                <form id="message-form" class="d-flex gap-2">
+                    <input type="text" class="form-control" id="message-input" placeholder="Type a message" required>
+                    <input type="file" class="form-control" id="message-attachment" accept="image/*" style="max-width: 200px;">
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </form>
+                <div class="alert alert-danger mt-2 d-none" id="message-error"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

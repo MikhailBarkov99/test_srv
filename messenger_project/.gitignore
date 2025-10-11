@@ -1,17 +1,27 @@
+# Python
 __pycache__/
 *.py[cod]
-*.sqlite3
-.env
-.env.*
-/media/
-/staticfiles/
-node_modules/
-.idea/
-.DS_Store
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Django
 *.log
-.mypy_cache/
-.pytest_cache/
-.sass-cache/
-/build/
-/dist/
-coverage/
+db.sqlite3
+db.sqlite3-journal
+/staticfiles/
+/mediafiles/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
