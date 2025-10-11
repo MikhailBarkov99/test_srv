@@ -1,0 +1,11 @@
+"""Main URL configuration for the messenger project."""
+from __future__ import annotations
+
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include('apps.api.urls')),
+    path('', include('frontend.urls')),
+]
