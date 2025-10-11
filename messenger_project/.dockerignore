@@ -1,0 +1,12 @@
+.git
+__pycache__
+*.py[cod]
+*.sqlite3
+.env
+.env.*
+/media
+/staticfiles
+node_modules
+*.log
+coverage
+frontend/assets/screenshots
