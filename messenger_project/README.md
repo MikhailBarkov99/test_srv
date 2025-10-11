@@ -146,7 +146,7 @@ coverage report
 
 ## API Documentation
 
-The API is fully documented in [API_DOCS.md](API_DOCS.md). An OpenAPI schema is exposed at `/api/schema/`, and interactive Swagger UI and Redoc frontends are available at `/api/docs/` and `/api/docs/redoc/` when running the Django server.
+The API is fully documented in [API_DOCS.md](API_DOCS.md). An OpenAPI schema is also exposed at `/api/schema/` when running the Django server.
 
 ## Deployment
 

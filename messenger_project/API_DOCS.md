@@ -2,8 +2,6 @@
 
 This document summarises the available REST API endpoints. All endpoints are prefixed with `/api/` and require JWT authentication unless explicitly stated.
 
-Interactive documentation is provided via Swagger UI at `/api/docs/` (alias `/api/docs/swagger/`) and Redoc at `/api/docs/redoc/`. The raw OpenAPI schema is accessible at `/api/schema/`.
-
 ## Authentication
 
 | Endpoint | Method | Description |

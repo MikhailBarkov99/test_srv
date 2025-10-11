@@ -2,11 +2,7 @@
 from __future__ import annotations
 
 from django.urls import include, path
-from drf_spectacular.views import (
-    SpectacularAPIView,
-    SpectacularRedocView,
-    SpectacularSwaggerView,
-)
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from rest_framework.routers import DefaultRouter
 
 from .views import (
@@ -31,21 +27,7 @@ urlpatterns = [
     path('auth/logout/', LogoutView.as_view(), name='auth-logout'),
     path('auth/refresh/', TokenRefreshView.as_view(), name='auth-refresh'),
     path('schema/', SpectacularAPIView.as_view(), name='api-schema'),
-    path(
-        'docs/',
-        SpectacularSwaggerView.as_view(url_name='api-schema'),
-        name='api-docs',
-    ),
-    path(
-        'docs/redoc/',
-        SpectacularRedocView.as_view(url_name='api-schema'),
-        name='api-redoc',
-    ),
-    path(
-        'docs/swagger/',
-        SpectacularSwaggerView.as_view(url_name='api-schema'),
-        name='api-swagger',
-    ),
+    path('docs/', SpectacularSwaggerView.as_view(url_name='api-schema'), name='api-docs'),
     path('health/', api_health, name='api-health'),
     path('', include(router.urls)),
 ]
