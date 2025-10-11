@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Chats - Messenger{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-4 mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h2 class="h4">Chats</h2>
+            <button class="btn btn-primary btn-sm" id="create-chat-button">New Chat</button>
+        </div>
+        <input type="search" class="form-control mb-3" placeholder="Search chats" id="chat-search-input">
+        <ul class="list-group" id="chat-list"></ul>
+    </div>
+    <div class="col-md-8">
+        <div class="alert alert-info" id="welcome-message">
+            Select a chat from the left to start messaging.
+        </div>
+        <div id="chat-preview" class="d-none">
+            <h3 class="h5" id="preview-chat-name"></h3>
+            <p id="preview-chat-members" class="text-muted"></p>
+            <a class="btn btn-outline-primary" id="open-chat-link" href="#">Open chat</a>
+        </div>
+    </div>
+</div>
+{% include 'partials/chat_modal.html' %}
+{% endblock %}
